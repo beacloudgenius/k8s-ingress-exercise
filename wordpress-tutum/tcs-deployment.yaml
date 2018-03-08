@@ -1,18 +1,18 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: tcs
+  name: tutumwp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      role: tcs
+      role: tutumwp
   template:
     metadata:
       labels:
-        role: tcs
+        role: tutumwp
     spec:
       containers:
       - image: tutum/wordpress
         imagePullPolicy: IfNotPresent
-        name: tcs
+        name: tutumwp

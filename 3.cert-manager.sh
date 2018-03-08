@@ -4,4 +4,4 @@ helm install \
     --set ingressShim.extraArgs='{--default-issuer-name=letsencrypt-prod,--default-issuer-kind=ClusterIssuer}' \
     stable/cert-manager
 
-kubectl apply -f ingress/cluster-issuer.yaml
+kubectl apply -f ingress-nginx/cluster-issuer.yaml

@@ -17,7 +17,7 @@ Save kubernetes.io/tls secrets locally
 
 Reuse kubernetes.io/tls secrets saved earlier
 
-    kubectl apply -f tutumwp.cloudgenius.co.yaml
+    kubectl apply -f tls/tutumwp.cloudgenius.co.yaml
 
     kubectl create ns jenkins
-    kubectl apply -f jenkins.cloudgenius.co.yaml
+    kubectl apply -f tls/jenkins.cloudgenius.co.yaml

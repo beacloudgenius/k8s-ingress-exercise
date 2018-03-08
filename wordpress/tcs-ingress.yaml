@@ -1,0 +1,21 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: tcs
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    kubernetes.io/tls-acme: 'true'
+spec:
+  rules:
+    - host: tutumwp.cloudgenius.co
+      http:
+        paths:
+        - path: /
+          backend:
+            serviceName: tcs
+            servicePort: 80
+  tls:
+    - hosts:
+        - "tutumwp.cloudgenius.co"
+      secretName: tutumwp.cloudgenius.co

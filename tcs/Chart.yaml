@@ -1,0 +1,21 @@
+apiVersion: v1
+appVersion: "1.0"
+description: A Helm chart for thecloudseminar.com
+name: tcs
+version: 0.1.0
+keywords:
+  - thecloudseminar
+  - tcs
+  - wordpress
+home: https://thecloudseminar.com
+sources:
+  - https://github.com/beacloudgenius
+maintainers:
+  - name: Nilesh Londhe
+    email: nilesh@cloudgeni.us
+    url: https://be.a.cloudgeni.us/nilesh
+engine: gotpl
+icon: https://be.a.cloudgeni.us/logo.svg
+appVersion: 0.0.1
+deprecated: false
+tillerVersion: ">2.0.0"

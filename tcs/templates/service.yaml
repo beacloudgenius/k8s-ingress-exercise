@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "tcs.fullname" . }}
+  namespace: {{ .Release.Namespace }}  
+  labels:
+    app: {{ template "tcs.name" . }}
+    chart: {{ template "tcs.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "tcs.name" . }}
+    release: {{ .Release.Name }}

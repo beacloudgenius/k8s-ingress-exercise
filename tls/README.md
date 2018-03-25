@@ -1,6 +1,6 @@
 Inspect list of secrets
 
-    kubectl get secrets --all-namespaces
+    kubectl get secrets --all-namespaces  | grep tls 
 
     kubectl get secrets -n default
     kubectl get secrets -n jenkins

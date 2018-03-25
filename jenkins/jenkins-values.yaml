@@ -3,18 +3,18 @@
 # helm --namespace jenkins --name jenkins -f ./jenkins-values.yaml install stable/jenkins
 
 Master:
-  ImageTag: "2.110"
+  ImageTag: "lts"
   Memory: "512Mi"
   HostName: jenkins.cloudgenius.co
   ServiceType: ClusterIP
   InstallPlugins:
-    - kubernetes:1.2
+    - kubernetes:1.4
     - workflow-aggregator:2.5
     - workflow-job:2.17
-    - credentials-binding:1.15
-    - git:3.7.0
+    - credentials-binding:1.16
+    - git:3.8.0
     - ghprb:1.40.0
-    - blueocean:1.4.1
+    - blueocean:1.4.2
 
   ScriptApproval:
     - "method groovy.json.JsonSlurperClassic parseText java.lang.String"

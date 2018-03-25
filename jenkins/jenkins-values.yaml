@@ -27,7 +27,7 @@ Master:
       kubernetes.io/tls-acme: "true"
 
     TLS:
-      - secretName: jenkins.cloudgenius.co
+      - secretName: jenkins.cloudgenius.co-tls
         hosts:
           - jenkins.cloudgenius.co
 

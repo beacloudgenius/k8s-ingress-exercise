@@ -10,13 +10,13 @@ Master:
   HostName: jenkins.cloudgenius.co
   ServiceType: ClusterIP
   InstallPlugins:
-    - kubernetes:1.4
-    - workflow-aggregator:2.5
-    - workflow-job:2.17
-    - credentials-binding:1.16
-    - git:3.8.0
-    - ghprb:1.40.0
-    - blueocean:1.4.2
+    - kubernetes:1.14.8
+    - workflow-aggregator:2.6
+    - workflow-job:2.32
+    - credentials-binding:1.18
+    - git:3.9.3
+    - ghprb:1.42.0
+    - blueocean:1.13.2
 
   ScriptApproval:
     - "method groovy.json.JsonSlurperClassic parseText java.lang.String"

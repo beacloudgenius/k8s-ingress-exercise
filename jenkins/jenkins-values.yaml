@@ -1,6 +1,12 @@
 Master:
   ImageTag: "lts"
-  Memory: "512Mi"
+  resources:
+    requests:
+      cpu: "50m"
+      memory: "256Mi"
+    limits:
+      cpu: "1000m"
+      memory: "1024Mi"
   HostName: jenkins.cloudgenius.co
   ServiceType: ClusterIP
   InstallPlugins:

@@ -19,4 +19,4 @@ spec:
   tls:
     - hosts:
         - "tutumwp.boeing.internal.cloudgenius.app"
-      secretName: tutumwpTLS
+      secretName: tutumwp.boeing.internal.cloudgenius.app

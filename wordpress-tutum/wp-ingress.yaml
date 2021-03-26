@@ -9,7 +9,7 @@ metadata:
     # kubernetes.io/tls-acme: 'true'
 spec:
   rules:
-    - host: tutumwp.cloudgenius.co
+    - host: tutumwp.boeing.internal.cloudgenius.app
       http:
         paths:
         - path: /
@@ -18,5 +18,5 @@ spec:
             servicePort: 80
   tls:
     - hosts:
-        - "tutumwp.cloudgenius.co"
-      secretName: tutumwp.cloudgenius.co
+        - "tutumwp.boeing.internal.cloudgenius.app"
+      secretName: tutumwpTLS

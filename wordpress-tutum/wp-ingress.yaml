@@ -1,5 +1,5 @@
 ---
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: tutumwp
@@ -12,10 +12,13 @@ spec:
     - host: tutumwp.boeing.internal.cloudgenius.app
       http:
         paths:
-        - path: /
-          backend:
-            serviceName: tutumwp
-            servicePort: 80
+          - backend:
+              service:
+                name: tutumwp
+                port:
+                  number: 80
+            path: /
+            pathType: Prefix
   tls:
     - hosts:
         - "tutumwp.boeing.internal.cloudgenius.app"
